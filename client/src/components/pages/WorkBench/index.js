@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
   // Comment out to prevent warnings when needed they are here for easy access 
 import { Row } from 'reactstrap';
-import TextCard from '../../parts/TextCard';
+// import 'prismjs/components/prism-clike';
+// import 'prismjs/components/prism-javascript';
 // import API from '../../../utils/API';
 // import SweetAlert from 'react-bootstrap-sweetalert';
 
-
+const questions = ["Use fetch to make a call to json placeholder"]
 
 /* What I am building today: 
   -
@@ -42,16 +43,20 @@ class WorkBench extends Component {
 
   render() {
     return (
-      <Row style={styles.box} className="pt-5">
-        <TextCard 
-          className="mx-auto"
-          title="Welcome to your workbench"
-          subtitle="Use this to build components away from rest of app"
-        >
-          <h3 className="text-center">{this.state.input}</h3>
-          <input className="form-control" name="input" type="text" onChange={this.handleInputChange}></input>
-        </TextCard>
-        
+      <Row style={styles.box} className="pt-5 m-1">
+
+        <Row className="m-1">
+          <h5>Question:</h5>
+          <p>{questions[0]}</p>
+        </Row>
+
+        <iframe style={styles.code} title="codepen" src="https://codepen.io/pen/"  width="100%" height="450px" />
+
+        <br ></br>
+
+        <h3 className="mx-auto bg-info p-1 m-1 rounded">Search below if you have any questions</h3>
+
+        <iframe title="yourBuddy" src="https://bing.com/" width="100%" height="450px" />
       </Row>
     );
   }
@@ -61,6 +66,9 @@ class WorkBench extends Component {
 const styles = {
   box: {
     backgroundColor: "#efee"
+  },
+  code: {
+    overflow: "auto"
   }
 }
 

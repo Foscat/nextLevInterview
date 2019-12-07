@@ -10,7 +10,7 @@ import NavBar from "./components/parts/NavBar";
 class App extends Component {
     render() {
         return (
-            <div>
+            <div style={{backgroundColor:"lightblue", height:"100vh"}}>
                 {/* Allows navbar to stay on all pages */}
                 <NavBar />
                 <Router>

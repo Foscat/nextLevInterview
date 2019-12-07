@@ -4,11 +4,13 @@
   "description": "client side of MERN app",
   "dependencies": {
     "axios": ">=0.18.1",
+    "prysm": "^0.1.16",
     "react": "^16.6.3",
     "react-bootstrap-sweetalert": "^4.4.1",
     "react-dom": "^16.6.6",
     "react-router-dom": "^4.3.1",
     "react-scripts": "^3.0.1",
+    "react-simple-code-editor": "^0.10.0",
     "reactstrap": "^7.1.0"
   },
   "private": true,

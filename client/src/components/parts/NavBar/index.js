@@ -19,10 +19,12 @@ class NavBar extends Component  {
             <div style={styles.margin}>
 
                 <nav style={styles.body} className="navbar navbar-expand-lg fixed-top navbar-light">
+
+                    <img src="./images/logo_transparent.png" height="50px" width="50px" alt="logo"/>
                     <strong>
                         {/* // eslint-disable-next-line */}
                         <a className="navbar-brand" href="/" style={styles.brand}>
-                            MERN App Template
+                            Next Level Interview 
                         </a>
                     </strong>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

@@ -213,55 +213,28 @@ class Home extends Component{
                 <Row className="mx-auto">
 
                     {/* Add user form */}
-                    <Col lg="6" className="mx-auto">
+                    <Col lg="9" className="mx-auto">
                         <TextCard 
-                            title="Basic component"
-                            subtitle="DB test form">
-                                <Button color="info" onClick={() => this.getUsers()}>
-                                    Get all users in DB
-                                </Button>
-                                {/* Sign up component holds the actual form inside of another component files kept nested to 
-                                    help with organization  */}
-                                <CustomerSignUp 
-                                    handleInputChange={this.handleInputChange}
-                                    handleFormSubmit={this.signUpUser}
-                                />
+                            title="Welcome to the new wave interview process"
+                        >
+                           <div style={{display:"flex"}}>
+                                <img height="50%" width="50%" src="./images/facebook_cover_photo_1.png" alt="logo1" />
+                                
+                                <div className="m-1 pl-5" style={{display:"flex", flexDirection:"column"}}>
+                                    <h4>Our goal is to help find...</h4>
+                                    <ul style={{listStyle:"none"}}>
+                                        <li>Research Skills</li>
+                                        <li>OOP Knowledge</li>
+                                        <li>Dubugging Skills</li>
+                                        <li>Communication Skills</li>
+                                        <li>Ability to work under pressure</li>
+                                    </ul>
+                                </div>
+                           </div>
                         </TextCard>
 
                     </Col>
                     
-
-                    {/* See all users in db */}
-                    <Col lg="6" className="mx-auto">
-                        {this.state.userPool.length ? (
-                            <div>
-                                {this.state.userPool.map((user) => {
-                                    return(
-                                        <TextCard
-                                        key={user._id}
-                                        title={user.first_name}
-                                        subtitle={user.last_name}
-                                        >
-                                            {/* Show other user information as children */}
-                                            <span><h6>Phone number:</h6> <p>{user.phone_num}</p></span>
-                                            <span><h6>Email:</h6> <p>{user.email}</p></span>
-                                            <span><h6>Password:</h6> <p>{user.password}</p></span>
-                                            <span><h6>User since:</h6> <p>{user.createdAt}</p></span>
-                                            {/* Delete this user button */}
-                                            <Button color="danger" onClick={() => this.deleteUser(user._id)}>
-                                                Delete
-                                            </Button>
-                                            {/* Edit user button */}
-                                            <Button color="info" onClick={() =>  this.editUserModal(user)}>
-                                                Edit
-                                            </Button>
-                                        </TextCard>
-                                    )
-                                })}
-                            </div>
-                            // If nothing is in array display empty p tag
-                        ) : (<p></p>)}
-                    </Col>
 
                 </Row>
                 
